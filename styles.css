@@ -13,7 +13,7 @@
         }
 
         .container {
-            max-width: 1920px;
+            max-width: 120.0rem;
             margin: 0 auto;
             
             
@@ -25,24 +25,24 @@
             flex-wrap: wrap;
             height: 100vh;
             align-items: center;
-            gap: 40px;
-            padding-left: 64px;
-            padding-top: 60px;
-            padding-bottom: 112px;
-            padding-right: 64px;
+            gap: 2.5rem;
+            padding-left: 4.0rem;
+            padding-top: 3.75rem;
+            padding-bottom: 7.0rem;
+            padding-right: 4.0rem;
         }
 
         /* Columna izquierda */
         .hero-content {
             flex: 1;
-            min-width: 300px;
+            min-width: 18.75rem;
         }
 
         /* Logo */
         .logo {
             display: inline-flex;
-            margin-bottom: 30px;
-            border-radius: 50px;
+            margin-bottom: 1.875rem;
+            border-radius: 3.125rem;
             overflow: hidden;
         }
 
@@ -50,28 +50,28 @@
             background-color: #FEC526;
             color: #E63946;
             font-weight: 700;
-            padding: 8px 15px;
+            padding: 0.5rem 0.9375rem;
         }
 
         .logo-keego {
             background-color: #00B2B0;
             color: white;
             font-weight: 700;
-            padding: 8px 15px;
+            padding: 0.5rem 0.9375rem;
         }
 
         .hero-title .regular {
             font-weight: 400;
-            font-size: 67px;
-            line-height: 75px;
+            font-size: 4.1875rem;
+            line-height: 4.6875rem;
             letter-spacing: -2%;
             color: #000;
         }
 
         .hero-title .bold {
             font-weight: 700;
-            font-size: 67px;
-            line-height: 75px;
+            font-size: 4.1875rem;
+            line-height: 4.6875rem;
             letter-spacing: -2%;
             display: block;
             color: #000;
@@ -82,21 +82,21 @@
         .hero-title {
             font-size: 2.5rem;
             line-height: 1.2;
-            margin-bottom: 20px;
+            margin-bottom: 1.25rem;
         }
 
         .discount-text {
             font-weight: 700;
             display: block;
-            margin-top: 10px;
+            margin-top: 0.625rem;
         }
 
         /* Párrafo */
         .hero-description {
             font-size: 1rem;
             color: #666666;
-            margin-bottom: 30px;
-            max-width: 500px;
+            margin-bottom: 1.875rem;
+            max-width: 31.25rem;
         }
 
         /* Botón */
@@ -104,10 +104,10 @@
             display: inline-block;
             background-color: #FEC526;
             color: #000000;
-            font-size: 16px;
+            font-size: 1.0rem;
             font-weight: 400;
-            padding: 12px 25px;
-            border-radius: 50px;
+            padding: 0.75rem 1.5625rem;
+            border-radius: 3.125rem;
             text-decoration: none;
             transition: background-color 0.3s ease;
         }
@@ -121,14 +121,14 @@
             position: relative;
             display: inline-block;
             flex: 1;
-            min-width: 300px;
+            min-width: 18.75rem;
             display: flex;
             justify-content: center;
         }
 
         .circular-image {
             width: 90%;
-            max-width: 620px;
+            max-width: 38.75rem;
             height: auto;
             aspect-ratio: 1/1;
             border-radius: 50%;
@@ -138,32 +138,32 @@
         /* Banner rojo */
         .benefits-sticker {
             position: absolute;
-            bottom: -10px; 
+            bottom: -0.625rem; 
             left: 50%;
             transform: translateX(-50%);
-            max-width: 380px; 
+            max-width: 23.75rem; 
             height: auto;
         }
 
         /* Sección de beneficios */
         .benefits-section {
-            padding: 40px 0;
-            margin-left: 64px;
-            margin-right: 64px;
-            max-width: 1600px;
+            padding: 2.5rem 0;
+            margin-left: 4.0rem;
+            margin-right: 4.0rem;
+            max-width: 100.0rem;
         }
 
         .benefits-title {
             text-align: center;
-            font-size: 32px;
-            margin-bottom: 40px;
+            font-size: 2.0rem;
+            margin-bottom: 2.5rem;
         }
 
         .benefits-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
         }
 
         .benefit-card {
@@ -174,8 +174,8 @@
         }
 
         .benefit-icon-img {
-            width: 64px;
-            height: 64px;
+            width: 4.0rem;
+            height: 4.0rem;
             object-fit: contain;
         }
 
@@ -183,31 +183,31 @@
         .benefit-title {
             font-weight: 700;
             font-size: 1.2rem;
-            margin-bottom: 10px;
+            margin-bottom: 0.625rem;
         }
 
         .benefit-description {
             color: #000000;
             font-size: 0.9rem;
-            max-width: 300px;
+            max-width: 18.75rem;
             margin: 0 auto;
         }
 
         .center-button {
             text-align: center;
-            margin-top: 20px;
-            margin-bottom: 60px;
+            margin-top: 1.25rem;
+            margin-bottom: 3.75rem;
         }
 
         /* Nueva sección de beneficios con tabs y acordeones */
         .extended-benefits {
-            padding: 40px 0;
+            padding: 2.5rem 0;
             background-color: #FAFAFA;
-            margin-top: 40px;
-            padding-left: 64px;
-            padding-top: 112px;
-            padding-bottom: 112px;
-            padding-right: 64px;
+            margin-top: 2.5rem;
+            padding-left: 4.0rem;
+            padding-top: 7.0rem;
+            padding-bottom: 7.0rem;
+            padding-right: 4.0rem;
         }
 
         .header-section {
@@ -217,43 +217,43 @@
         .preheader {
             color: #692727;
             font-weight: 600;
-            margin-bottom: 10px;
-            font-size: 16px;
+            margin-bottom: 0.625rem;
+            font-size: 1.0rem;
         }
 
         .extended-benefits-header {
-            font-size: 48px;
+            font-size: 3.0rem;
             font-weight: 700;
-            margin-bottom: 15px;
+            margin-bottom: 0.9375rem;
             line-height: 1.2;
         }
 
         .extended-benefits-text {
             color: #666666;
-            margin-bottom: 30px;
-            max-width: 600px;
+            margin-bottom: 1.875rem;
+            max-width: 37.5rem;
         }
 
         /* Contenedor principal de tabs y sidebar */
         .tabs-sidebar-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 30px;
+            gap: 1.875rem;
         }
 
         .benefits-content-wrapper {
             display: flex;
             flex-wrap: wrap;
-            gap: 30px;
+            gap: 1.875rem;
             align-items: center; /* centrado vertical */
-            padding: 40px;
+            padding: 2.5rem;
         }
 
         
 
         .accordion-column {
             flex: 1;
-            min-width: 300px;
+            min-width: 18.75rem;
             width: 50%;
         }
 
@@ -272,23 +272,23 @@
         .tabs-container {
             flex: 1;
             background-color: white;
-            border: 1px solid;
+            border: 0.0625rem solid;
             border-color: rgba(0, 0, 0, 0.3);
-            border-radius: 12px;
-            min-width: 300px;
+            border-radius: 0.75rem;
+            min-width: 18.75rem;
         }
 
         /* Tabs */
         .tabs {
             display: flex;
-            margin-bottom: 20px;
-            border-radius: 12px;
+            margin-bottom: 1.25rem;
+            border-radius: 0.75rem;
             overflow: hidden;
         }
 
         .tab {
             flex: 1;
-            padding: 15px;
+            padding: 0.9375rem;
             text-align: center;
             cursor: pointer;
             font-weight: 500;
@@ -296,7 +296,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 0.5rem;
         }
 
         .tab.active {
@@ -321,14 +321,14 @@
 
         /* Acordeones */
         .accordion {
-            margin-bottom: 10px;
-            border-radius: 8px;
+            margin-bottom: 0.625rem;
+            border-radius: 0.5rem;
             overflow: hidden;
         }
 
         .accordion-header {
             background-color: #fff;
-            padding: 15px;
+            padding: 0.9375rem;
             cursor: pointer;
             font-weight: 700;
             display: flex;
@@ -351,12 +351,12 @@
             overflow: hidden;
             transition: max-height 0.3s ease;
             background-color: #fff;
-            gap: 15px;
+            gap: 0.9375rem;
         }
 
         .accordion.active .accordion-content {
-            max-height: 500px;
-            border-bottom: 1px solid #eee;
+            max-height: 31.25rem;
+            border-bottom: 0.0625rem solid #eee;
         }
 
         /* Lista de beneficios */
@@ -366,17 +366,17 @@
             margin: 0;
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 0.9375rem;
         }
 
         .benefit-item {
-            padding: 12px 15px;
-            border: 1px solid;
-            border-radius: 12px;
+            padding: 0.75rem 0.9375rem;
+            border: 0.0625rem solid;
+            border-radius: 0.75rem;
             border-color: rgba(0, 0, 0, 0.1);
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 0.9375rem;
         }
 
         .benefit-item:last-child {
@@ -386,7 +386,7 @@
         .benefit-icon-small {
             color: #E63946;
             font-size: 1.2rem;
-            min-width: 24px;
+            min-width: 1.5rem;
         }
 
         /* Sidebar */
@@ -397,9 +397,9 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            border: 1px solid #FEC526;
-            border-radius: 12px;
-            padding: 40px 20px 20px 20px;
+            border: 0.0625rem solid #FEC526;
+            border-radius: 0.75rem;
+            padding: 2.5rem 1.25rem 1.25rem 1.25rem;
             background-color: #fff;
             position: relative;
             text-align: center;
@@ -408,11 +408,11 @@
 
         .discount-badge {
             position: absolute;
-            top: -60px;
+            top: -3.75rem;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
-            height: 80px;
+            width: 5.0rem;
+            height: 5.0rem;
         }
 
         .discount-amount {
@@ -424,24 +424,24 @@
         }
 
         .sidebar-title {
-            font-size: 32px;
+            font-size: 2.0rem;
             font-weight: 700;
-            margin-bottom: 0px;
+            margin-bottom: 0.0rem;
         }
 
         .sidebar-subtitle {
             color: #000;
-            font-size: 16px;
-            margin-bottom: 0px;
+            font-size: 1.0rem;
+            margin-bottom: 0.0rem;
         }
 
         .price {
             font-size: 2rem;
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 0.625rem;
             display: flex;
             align-items: baseline;
-            gap: 5px;
+            gap: 0.3125rem;
         }
 
         .currency {
@@ -461,9 +461,9 @@
             width: 100%;
             text-align: center;
             background-color: #FEC526;
-            padding: 14px 0;
+            padding: 0.875rem 0;
             font-weight: 500;
-            border-radius: 12px;
+            border-radius: 0.75rem;
             transition: background-color 0.3s ease;
         }
 
@@ -477,18 +477,18 @@
         .institutional-section {
             
             
-            padding: 60px 0;
-            margin-top: 40px;
+            padding: 3.75rem 0;
+            margin-top: 2.5rem;
         }
 
         .institutional-container {
             display: flex;
             flex-wrap: wrap;
-            max-width: 1600px;
-            gap: 40px;
-            margin-bottom: 100px;
-            margin-left: 64px;
-            margin-right: 64px;
+            max-width: 100.0rem;
+            gap: 2.5rem;
+            margin-bottom: 6.25rem;
+            margin-left: 4.0rem;
+            margin-right: 4.0rem;
         }
 
         .institucional-mobile {
@@ -498,12 +498,12 @@
         /* Columna de imagen */
         .image-column {
             flex: 1;
-            min-width: 300px;
+            min-width: 18.75rem;
             position: relative;
-            border-radius: 8px;
+            border-radius: 0.5rem;
             overflow: hidden;
-            height: 600px;
-            max-height: 600px;
+            height: 37.5rem;
+            max-height: 37.5rem;
         }
 
         .institutional-image {
@@ -512,7 +512,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            max-height: 600px;
+            max-height: 37.5rem;
             object-fit: cover;
             opacity: 0;
             transition: opacity 0.5s ease;
@@ -520,19 +520,19 @@
 
         .institutional-image.active {
             opacity: 1;
-            height: 600px;
+            height: 37.5rem;
         }
 
         /* Columna de información */
         .info-column {
             flex: 1;
-            min-width: 300px;
+            min-width: 18.75rem;
             max-width: 40%;
             display: flex;
             flex-direction: column;
             align-items: stretch;
             justify-content: space-around;
-            gap: 30px;
+            gap: 1.875rem;
         }
 
         .info-block {
@@ -540,23 +540,23 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 40px;
-            border-radius: 8px;
-            border: 1px solid #eee;
+            padding: 2.5rem;
+            border-radius: 0.5rem;
+            border: 0.0625rem solid #eee;
             transition: all 0.3s ease;
             cursor: pointer;
         }
 
         .info-block:hover {
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transform: translateY(-5px);
+            box-shadow: 0 0.3125rem 0.9375rem rgba(0,0,0,0.05);
+            transform: translateY(-0.3125rem);
         }
 
         .info-title {
             color: #FEC526;
             font-size: 1.5rem;
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 0.625rem;
         }
 
         .info-text {
@@ -567,29 +567,29 @@
         /* Bloque de CTA */
         .join-cta {
             text-align: center;
-            max-width: 700px;
+            max-width: 43.75rem;
             margin: 0 auto;
         }
 
         .join-title {
-            font-size: 48px;
+            font-size: 3.0rem;
             line-height: 120%;
             font-weight: 700;
-            margin-bottom: 15px;
+            margin-bottom: 0.9375rem;
         }
 
         .join-text {
             color: #666;
-            margin-bottom: 25px;
+            margin-bottom: 1.5625rem;
         }
 
         /* Carrusel móvil */
         .mobile-carousel {
             display: none;
             background-color: #fff;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            margin: 20px 0;
+            border-radius: 1.0rem;
+            box-shadow: 0 0.625rem 1.875rem rgba(0,0,0,0.1);
+            margin: 1.25rem 0;
             overflow: hidden;
             position: relative;
         }
@@ -598,7 +598,7 @@
             position: relative;
             overflow: hidden;
             width: 100%;
-            padding-top: 20px;
+            padding-top: 1.25rem;
         }
 
         .carousel-slides {
@@ -609,7 +609,7 @@
 
         .carousel-slide {
             min-width: 100%; 
-            padding: 20px;
+            padding: 1.25rem;
             text-align: center;
             box-sizing: border-box;
             display: flex;
@@ -625,15 +625,15 @@
         }
 
         .slide-content {
-            margin-bottom: 20px;
-            padding: 0 10px;
+            margin-bottom: 1.25rem;
+            padding: 0 0.625rem;
         }
 
         .slide-title {
             font-size: 1.5rem;
             font-weight: 700;
             color: #FEC526;
-            margin-bottom: 10px;
+            margin-bottom: 0.625rem;
         }
 
         .slide-description {
@@ -644,10 +644,10 @@
 
         .slide-image {
             width: 100%;
-            height: 400px;
+            height: 25.0rem;
             object-fit: cover;
-            border-radius: 12px;
-            margin: 0px;
+            border-radius: 0.75rem;
+            margin: 0.0rem;
             display: block;
             flex-shrink: 0;
         }
@@ -660,13 +660,13 @@
             background-color: rgba(255,255,255,0.9);
             border: none;
             border-radius: 50%;
-            width: 35px;
-            height: 35px;
+            width: 2.1875rem;
+            height: 2.1875rem;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 1.0rem;
             color: #000;
             transition: background-color 0.3s;
             z-index: 10;
@@ -677,32 +677,32 @@
         }
 
         .carousel-prev {
-            left: 10px;
+            left: 0.625rem;
         }
 
         .carousel-next {
-            right: 10px;
+            right: 0.625rem;
         }
 
         /* Dots de paginación */
         .carousel-dots {
             position: absolute;
-            bottom: 40px;
+            bottom: 2.5rem;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
-            gap: 8px;
+            gap: 0.5rem;
             z-index: 10;
         }
 
         .carousel-dot {
-            width: 10px;
-            height: 10px;
+            width: 0.625rem;
+            height: 0.625rem;
             border-radius: 50%;
             background-color: rgba(255,255,255,0.6);
             cursor: pointer;
             transition: background-color 0.3s;
-            border: 2px solid rgba(255,255,255,0.8);
+            border: 0.125rem solid rgba(255,255,255,0.8);
         }
 
         .carousel-dot.active {
@@ -714,32 +714,32 @@
         /* Footer */
         .footer {
             background-color: #f5f5f5;
-            padding: 40px 20px;
-            margin-top: 60px;
+            padding: 2.5rem 1.25rem;
+            margin-top: 3.75rem;
         }
 
         .footer-container {
-            max-width: 1200px;
+            max-width: 75.0rem;
             margin: 0 auto;
             text-align: center;
         }
 
         .footer-logo {
-            margin-bottom: 15px;
-            max-width: 200px;
+            margin-bottom: 0.9375rem;
+            max-width: 12.5rem;
             height: auto;
         }
 
         .copyright {
             font-size: 0.9rem;
             color: #666;
-            margin-bottom: 20px;
+            margin-bottom: 1.25rem;
         }
 
         .footer-divider {
-            height: 1px;
+            height: 0.0625rem;
             background-color: #ddd;
-            margin: 20px 0;
+            margin: 1.25rem 0;
             width: 100%;
         }
 
@@ -747,19 +747,19 @@
             font-size: 0.65rem;
             color: #000;
             text-transform: uppercase;
-            max-width: 1100px;
+            max-width: 68.75rem;
             margin: 0 auto;
             line-height: 1.4;
             text-align: center;
         }
 
         /* Responsive */
-        @media (max-width: 768px) {
+        @media (max-width: 48.0rem) {
             .hero-section {
                 flex-direction: column;
                 text-align: left;
                 height: auto;
-                padding: 40px 20px;
+                padding: 2.5rem 1.25rem;
             }
 
             .hero-content {
@@ -779,28 +779,28 @@
             }
 
             .hero-title {
-                font-size: 32px!important;
+                font-size: 2.0rem!important;
             }
 
             .hero-title .regular {
             font-weight: 400;
-            font-size: 36px;
-            line-height: 36px;
+            font-size: 2.25rem;
+            line-height: 2.25rem;
             letter-spacing: -2%;
             color: #000;
             }
 
             .hero-title .bold {
                 font-weight: 700;
-                font-size: 36px;
-                line-height: 36px;
+                font-size: 2.25rem;
+                line-height: 2.25rem;
                 letter-spacing: -2%;
                 display: block;
                 color: #000;
             }
 
             .benefits-section {
-                padding: 60px 0px;
+                padding: 3.75rem 0.0rem;
             }
 
             .benefits-grid {
@@ -808,13 +808,13 @@
             }
 
             .benefits-title {
-                font-size: 28px;
-                line-height: 35px;
+                font-size: 1.75rem;
+                line-height: 2.1875rem;
             }
 
             .benefits-sticker {
-                max-width: 350px;
-                bottom: -10px;
+                max-width: 21.875rem;
+                bottom: -0.625rem;
             }
 
             .header-section {
@@ -828,7 +828,7 @@
             
             .benefits-content-wrapper {
                 align-items: center;
-                padding: 20px;
+                padding: 1.25rem;
             }
 
             .tab {
@@ -836,17 +836,17 @@
             }
 
             .sidebar-title {
-                font-size: 24px;
+                font-size: 1.5rem;
             }
             
 
             .pricing-sidebar {
                 width: 100%;
-                margin-top: 30px;
+                margin-top: 1.875rem;
             }
 
             .extended-benefits {
-                padding: 80px 20px;
+                padding: 5.0rem 1.25rem;
             }
 
             .extended-benefits-header {
@@ -858,9 +858,9 @@
             .institutional-container {
                 flex-direction: column;
                 align-items: center;
-                margin-left: 20px;
-                margin-right: 20px;
-                gap: 24px;
+                margin-left: 1.25rem;
+                margin-right: 1.25rem;
+                gap: 1.5rem;
             }
 
             .institutional-desktop {
@@ -899,13 +899,13 @@
 
             .info-block {
                 width: 100%;
-                max-width: 350px;
+                max-width: 21.875rem;
             }
 
             /* Mostrar carrusel móvil y ocultar versión desktop */
 
             .section-carrousel {
-                padding: 60px 20px;
+                padding: 3.75rem 1.25rem;
             }
 
             .stats-container {
@@ -925,7 +925,7 @@
             }
 
             .stats-section {
-                padding: 40px 0;
+                padding: 2.5rem 0;
             }
 
             .join-title {
@@ -937,6 +937,6 @@
             }
 
             footer-logo {
-                max-width: 200px;
+                max-width: 12.5rem;
             }
         }
