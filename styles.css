@@ -538,7 +538,7 @@
         .institutional-section {
             
             
-            padding: 60px 0;
+            padding: 60px 64px;
             margin-top: 40px;
         }
 
@@ -551,6 +551,8 @@
             margin-left: 64px;
             margin-right: 64px;
         }
+
+       
 
         .institucional-mobile {
             display: none;
