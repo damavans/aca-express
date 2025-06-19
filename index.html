@@ -228,7 +228,7 @@
                  <div class="header-section">
                     <p class="preheader">Beneficios que te acompañan a donde vayas</p>
                     <h2 class="extended-benefits-header">Más de lo que esperás, por menos de lo que imaginás</h2>
-                    <p class="extended-benefits-text">Ser parte del ACA es tener un compañero de ruta que piensa en tu viaje, tu vehículo...pero sobre todo en vos.</p>
+                    <p class="extended-benefits-text">Ser parte del ACA es tener un compañero de ruta que piensa en tu viaje, tu vehículo... pero sobre todo en vos.</p>
                  </div>
                 
                 
@@ -704,319 +704,136 @@ AUTOMÓVIL CLUB ARGENTINO - CUIT 30-50014329-7 - AV. DEL LIBERTADOR 1850 C.A.B.A
     </div>
   <!-- JavaScript optimizado -->
   <script>
-    // JavaScript para funcionalidad optimizada con mejores prácticas de accesibilidad
-    document.addEventListener('DOMContentLoaded', function() {
-      // Funcionalidad de tabs accesible
-      const tabs = document.querySelectorAll('.tab');
-      const tabContents = document.querySelectorAll('.tab-content');
-      
-      tabs.forEach((tab, index) => {
-        tab.addEventListener('click', () => {
-          // Desactivar todos los tabs
-          tabs.forEach((t, i) => {
-            t.classList.remove('active');
-            t.setAttribute('aria-selected', 'false');
-            t.setAttribute('tabindex', '-1');
-          });
-          
-          tabContents.forEach(c => c.classList.remove('active'));
-          
-          // Activar el tab seleccionado
-          tab.classList.add('active');
-          tab.setAttribute('aria-selected', 'true');
-          tab.setAttribute('tabindex', '0');
-          tabContents[index].classList.add('active');
-          
-          // Focus management
-          tab.focus();
-        });
-        
-        // Navegación con teclado
-        tab.addEventListener('keydown', (e) => {
-          let targetTab = null;
-          
-          if (e.key === 'ArrowRight') {
-            targetTab = tabs[index + 1] || tabs[0];
-          } else if (e.key === 'ArrowLeft') {
-            targetTab = tabs[index - 1] || tabs[tabs.length - 1];
-          }
-          
-          if (targetTab) {
+        // JavaScript para la funcionalidad de tabs y acordeones
+        document.addEventListener('DOMContentLoaded', function() {
+            // Funcionalidad de tabs
+            const tabs = document.querySelectorAll('.tab');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabs.forEach((tab, index) => {
+                tab.addEventListener('click', () => {
+                    // Desactivar todos los tabs
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tabContents.forEach(c => c.classList.remove('active'));
+                    
+                    // Activar el tab seleccionado
+                    tab.classList.add('active');
+                    tabContents[index].classList.add('active');
+                });
+            });
+            
+            // Funcionalidad de acordeones
+            const accordions = document.querySelectorAll('.accordion');
+            
+            accordions.forEach(accordion => {
+                const header = accordion.querySelector('.accordion-header');
+                
+                header.addEventListener('click', () => {
+                    accordion.classList.toggle('active');
+                });
+            });
+            
+            // Funcionalidad de cambio de imagen al hacer hover
+            const infoBlocks = document.querySelectorAll('.info-block');
+            const images = document.querySelectorAll('.institutional-image');
+            
+            // Función para mostrar la imagen correspondiente
+            function showImage(imageId) {
+                // Ocultar todas las imágenes
+                images.forEach(img => img.classList.remove('active'));
+                
+                // Mostrar la imagen seleccionada
+                document.getElementById(imageId).classList.add('active');
+            }
+            
+            // Asignar eventos de hover a los bloques de información
+            infoBlocks.forEach(block => {
+                block.addEventListener('mouseenter', () => {
+                    const imageId = block.getAttribute('data-image');
+                    showImage(imageId);
+                });
+            });
+
+             // Funcionalidad del carrusel móvil
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.carousel-slide');
+            const totalSlides = slides.length;
+            const slidesContainer = document.getElementById('carousel-slides');
+            const dots = document.querySelectorAll('.carousel-dot');
+            const prevBtn = document.getElementById('carousel-prev');
+            const nextBtn = document.getElementById('carousel-next');
+
+            function updateCarousel() {
+                const translateX = -currentSlide * 100;
+                slidesContainer.style.transform = `translateX(${translateX}%)`;
+                
+                // Actualizar dots
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentSlide);
+                });
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateCarousel();
+            }
+
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateCarousel();
+            }
+
+            // Event listeners para controles
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+
+            // Event listeners para dots
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentSlide = index;
+                    updateCarousel();
+                });
+            });
+
+            // ========================
+            // Popup de Política de Privacidad
+            // ========================
+            const privacyPolicyLink = document.getElementById('privacy-policy-link');
+            const privacyPopup = document.getElementById('privacy-popup');
+            const privacyPopupClose = document.getElementById('privacy-popup-close');
+
+            // Abrir popup
+            privacyPolicyLink.addEventListener('click', function(e) {
             e.preventDefault();
-            targetTab.click();
-          }
-        });
-      });
-      
-      // Funcionalidad de acordeones mejorada
-      const accordions = document.querySelectorAll('.accordion');
-      
-      accordions.forEach(accordion => {
-        const summary = accordion.querySelector('summary');
-        
-        if (summary) {
-          summary.addEventListener('click', (e) => {
-            // Los details/summary manejan automáticamente el toggle
-            // Solo agregamos analytics o efectos adicionales aquí si es necesario
-          });
-        }
-      });
-      
-      // Funcionalidad de cambio de imagen optimizada
-      const infoBlocks = document.querySelectorAll('.info-block');
-      const images = document.querySelectorAll('.institutional-image');
-      
-      function showImage(imageId) {
-        images.forEach(img => img.classList.remove('active'));
-        const targetImage = document.getElementById(imageId);
-        if (targetImage) {
-          targetImage.classList.add('active');
-        }
-      }
-      
-      infoBlocks.forEach(block => {
-        block.addEventListener('mouseenter', () => {
-          const imageId = block.getAttribute('data-image');
-          if (imageId) showImage(imageId);
-        });
-        
-        // Soporte para navegación por teclado
-        block.addEventListener('focus', () => {
-          const imageId = block.getAttribute('data-image');
-          if (imageId) showImage(imageId);
-        });
-      });
+            privacyPopup.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevenir scroll del body
+            });
 
-      // Carrusel móvil optimizado
-      let currentSlide = 0;
-      const slides = document.querySelectorAll('.carousel-slide');
-      const totalSlides = slides.length;
-      const slidesContainer = document.getElementById('carousel-slides');
-      const dots = document.querySelectorAll('.carousel-dot');
-      const prevBtn = document.getElementById('carousel-prev');
-      const nextBtn = document.getElementById('carousel-next');
+            // Cerrar popup con botón X
+            privacyPopupClose.addEventListener('click', function() {
+            privacyPopup.classList.remove('active');
+            document.body.style.overflow = 'auto'; // Restaurar scroll del body
+            });
 
-      function updateCarousel() {
-        const translateX = -currentSlide * 100;
-        slidesContainer.style.transform = `translateX(${translateX}%)`;
-        
-        // Actualizar dots con ARIA
-        dots.forEach((dot, index) => {
-          const isActive = index === currentSlide;
-          dot.classList.toggle('active', isActive);
-          dot.setAttribute('aria-selected', isActive.toString());
-        });
-        
-        // Actualizar aria-live para lectores de pantalla
-        slidesContainer.setAttribute('aria-live', 'polite');
-      }
-
-      function nextSlide() {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        updateCarousel();
-      }
-
-      function prevSlide() {
-        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-        updateCarousel();
-      }
-
-      // Event listeners
-      if (nextBtn) nextBtn.addEventListener('click', nextSlide);
-      if (prevBtn) prevBtn.addEventListener('click', prevSlide);
-
-      dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-          currentSlide = index;
-          updateCarousel();
-        });
-      });
-
-      // Auto-play pausable
-      let autoPlayInterval = setInterval(nextSlide, 5000);
-      
-      // Pausar auto-play en hover o focus
-      const carousel = document.querySelector('.mobile-carousel');
-      if (carousel) {
-        carousel.addEventListener('mouseenter', () => clearInterval(autoPlayInterval));
-        carousel.addEventListener('mouseleave', () => {
-          autoPlayInterval = setInterval(nextSlide, 5000);
-        });
-      }
-
-      // Popup de Política de Privacidad
-      const privacyPolicyLink = document.getElementById('privacy-policy-link');
-      const privacyPopup = document.getElementById('privacy-popup');
-      const privacyPopupClose = document.getElementById('privacy-popup-close');
-
-      function openPrivacyPopup() {
-        privacyPopup.classList.add('active');
-        privacyPopup.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
-        
-        // Focus management
-        privacyPopupClose.focus();
-        
-        // Trap focus dentro del popup
-        trapFocus(privacyPopup);
-      }
-
-      function closePrivacyPopup() {
-        privacyPopup.classList.remove('active');
-        privacyPopup.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = 'auto';
-        
-        // Devolver focus al enlace que abrió el popup
-        privacyPolicyLink.focus();
-      }
-
-      // Event listeners para popup
-      if (privacyPolicyLink) {
-        privacyPolicyLink.addEventListener('click', function(e) {
-          e.preventDefault();
-          openPrivacyPopup();
-        });
-      }
-
-      if (privacyPopupClose) {
-        privacyPopupClose.addEventListener('click', closePrivacyPopup);
-      }
-
-      if (privacyPopup) {
-        privacyPopup.addEventListener('click', function(e) {
-          if (e.target === privacyPopup) {
-            closePrivacyPopup();
-          }
-        });
-      }
-
-      // Cerrar con Escape
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && privacyPopup.classList.contains('active')) {
-          closePrivacyPopup();
-        }
-      });
-
-      // Función para trap focus (accesibilidad)
-      function trapFocus(element) {
-        const focusableElements = element.querySelectorAll(
-          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-        );
-        const firstFocusable = focusableElements[0];
-        const lastFocusable = focusableElements[focusableElements.length - 1];
-
-        element.addEventListener('keydown', function(e) {
-          if (e.key === 'Tab') {
-            if (e.shiftKey) {
-              if (document.activeElement === firstFocusable) {
-                e.preventDefault();
-                lastFocusable.focus();
-              }
-            } else {
-              if (document.activeElement === lastFocusable) {
-                e.preventDefault();
-                firstFocusable.focus();
-              }
+            // Cerrar popup haciendo clic en el overlay
+            privacyPopup.addEventListener('click', function(e) {
+            if (e.target === privacyPopup) {
+                privacyPopup.classList.remove('active');
+                document.body.style.overflow = 'auto';
             }
-          }
-        });
-      }
+            });
 
-      // Lazy loading mejorado para imágenes
-      if ('IntersectionObserver' in window) {
-        const imageObserver = new IntersectionObserver((entries, observer) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const img = entry.target;
-              if (img.dataset.src) {
-                img.src = img.dataset.src;
-                img.removeAttribute('data-src');
-              }
-              observer.unobserve(img);
+            // Cerrar popup con tecla Escape
+            document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && privacyPopup.classList.contains('active')) {
+                privacyPopup.classList.remove('active');
+                document.body.style.overflow = 'auto';
             }
-          });
+            });
+
+            
         });
-
-        document.querySelectorAll('img[data-src]').forEach(img => {
-          imageObserver.observe(img);
-        });
-      }
-
-      // Analytics y tracking optimizado
-      function trackEvent(eventName, eventData = {}) {
-        // Google Analytics 4
-        if (typeof gtag !== 'undefined') {
-          gtag('event', eventName, eventData);
-        }
-        
-        // Facebook Pixel
-        if (typeof fbq !== 'undefined') {
-          fbq('track', eventName, eventData);
-        }
-      }
-
-      // Tracking de CTAs
-      document.querySelectorAll('a[href*="asociacion"]').forEach(cta => {
-        cta.addEventListener('click', () => {
-          trackEvent('cta_click', {
-            cta_location: cta.closest('section')?.className || 'unknown',
-            cta_text: cta.textContent.trim()
-          });
-        });
-      });
-
-      // Tracking de interacciones
-      tabs.forEach((tab, index) => {
-        tab.addEventListener('click', () => {
-          trackEvent('tab_click', {
-            tab_index: index,
-            tab_name: tab.textContent.trim()
-          });
-        });
-      });
-    });
-
-    // Service Worker para PWA (opcional)
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-          .then(registration => {
-            console.log('SW registered: ', registration);
-          })
-          .catch(registrationError => {
-            console.log('SW registration failed: ', registrationError);
-          });
-      });
-    }
-  </script>
-
-  <!-- Google Analytics 4 (reemplazar con tu ID) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'GA_MEASUREMENT_ID', {
-      page_title: 'Asociate al ACA con 50% OFF',
-      page_location: window.location.href,
-      content_group1: 'Landing Page',
-      content_group2: 'ACA Keego Promotion'
-    });
-  </script>
-
-  <!-- Facebook Pixel (reemplazar con tu ID) -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'YOUR_PIXEL_ID');
-    fbq('track', 'PageView');
-  </script>
+    </script>
 </body>
 </html>
 
